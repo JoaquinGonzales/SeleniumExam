@@ -28,9 +28,11 @@ public class TestAccount {
         CreateAccountForm createaccount = accountpage.clickNewAccountBtn();
         createaccount.setAccountNameTextField("testaccount");
         createaccount.clickCreateAccountBtn();
-        String actualResults = accountpage.getAccountName();
+        String actualResultAccountSettings = accountpage.accountNameCreated();
+        String actualResultAccountCreatedTitle = accountpage.getAccountName();
 
-        Assert.assertEquals(actualResults,"testaccount");
+        Assert.assertEquals(actualResultAccountCreatedTitle,"testaccount");
+        Assert.assertEquals(actualResultAccountSettings,"testaccount");
     }
     @Test
     public void deleteAccountTest()

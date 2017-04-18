@@ -116,5 +116,10 @@ public class Accounts extends BasePage {
             //exception handling
         }
     }
+	  public String accountNameCreated()
+    {
+        clickWebElement(settingsTab);
+        return accountNameTextValue.getAttribute("value");
+    }
 }
 
